@@ -1,0 +1,86 @@
+@import '@rainbow-me/rainbowkit/styles.css';
+@import './shadcn.css';
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Responsive Hero Background Image */
+.hero-bg-responsive {
+  object-fit: cover;
+  object-position: left center;
+}
+
+/* Mobile Portrait (phones) */
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero-bg-responsive {
+    object-fit: cover;
+    object-position: left 30%;
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile Landscape (phones rotated) */
+@media (max-width: 896px) and (orientation: landscape) {
+  .hero-bg-responsive {
+    object-fit: cover;
+    object-position: left 20%;
+    transform: scale(1.05);
+  }
+}
+
+/* Small tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-bg-responsive {
+    object-fit: cover;
+    object-position: left 25%;
+    transform: scale(1.02);
+  }
+}
+
+/* Large tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-bg-responsive {
+    object-fit: cover;
+    object-position: left top;
+    transform: scale(1);
+  }
+}
+
+/* Large desktops */
+@media (min-width: 1025px) {
+  .hero-bg-responsive {
+    object-fit: cover;
+    object-position: left top;
+    transform: scale(1);
+  }
+}
+
+/* Hero Container Responsive Adjustments */
+.hero-container-responsive {
+  min-height: calc(100vh - 78px);
+}
+
+/* Mobile Portrait Hero Container */
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero-container-responsive {
+    min-height: calc(100vh - 78px);
+    height: calc(100vh - 78px);
+  }
+}
+
+/* Mobile Landscape Hero Container */
+@media (max-width: 896px) and (orientation: landscape) {
+  .hero-container-responsive {
+    min-height: calc(100vh - 78px);
+    height: calc(100vh - 78px);
+  }
+}
+
+/* Tablet Hero Container */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .hero-container-responsive {
+    min-height: calc(100vh - 78px);
+    height: calc(100vh - 78px);
+  }
+}
