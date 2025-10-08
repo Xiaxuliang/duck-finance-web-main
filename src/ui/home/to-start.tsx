@@ -27,6 +27,7 @@ export const ToStart: FC<ComponentProps<'div'>> = ({ ...props }) => {
 
   return (
     <div
+      id="mechanics"
       {...props}
       className="mx-auto mt-16 flex w-full max-w-[663px] flex-col items-center justify-center px-4 sm:mt-[160px] sm:px-0"
     >

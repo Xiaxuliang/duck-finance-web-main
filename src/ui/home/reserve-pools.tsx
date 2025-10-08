@@ -30,6 +30,7 @@ export const ReservePools: FC<ComponentProps<'section'>> = ({ ...props }) => {
 
   return (
     <section
+      id="introduction"
       className="mx-auto w-full max-w-[960px] bg-[#E9D8B9] px-4 py-8 sm:px-0 sm:py-0"
       {...props}
     >

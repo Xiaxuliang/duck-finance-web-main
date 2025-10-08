@@ -18,6 +18,13 @@ export const Header: FC<ComponentProps<'div'>> = ({ ...props }) => {
     toast.info(`${feature} coming soon!`);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -44,6 +51,18 @@ export const Header: FC<ComponentProps<'div'>> = ({ ...props }) => {
           >
             Home
           </Link>
+          <button
+            onClick={() => scrollToSection('introduction')}
+            className="flex cursor-pointer items-center justify-center gap-2 transition-opacity hover:opacity-80"
+          >
+            Introduction
+          </button>
+          <button
+            onClick={() => scrollToSection('mechanics')}
+            className="flex cursor-pointer items-center justify-center gap-2 transition-opacity hover:opacity-80"
+          >
+            Mechanics
+          </button>
           <button
             onClick={() => handleComingSoon('Stake')}
             className="flex cursor-pointer items-center justify-center gap-2 transition-opacity hover:opacity-80"
@@ -104,6 +123,24 @@ export const Header: FC<ComponentProps<'div'>> = ({ ...props }) => {
             >
               Home
             </Link>
+            <button
+              onClick={() => {
+                scrollToSection('introduction');
+                setIsMobileMenuOpen(false);
+              }}
+              className="flex cursor-pointer items-center justify-center gap-2 py-2 text-sm font-semibold text-[#FFEDBB] transition-opacity hover:opacity-80"
+            >
+              Introduction
+            </button>
+            <button
+              onClick={() => {
+                scrollToSection('mechanics');
+                setIsMobileMenuOpen(false);
+              }}
+              className="flex cursor-pointer items-center justify-center gap-2 py-2 text-sm font-semibold text-[#FFEDBB] transition-opacity hover:opacity-80"
+            >
+              Mechanics
+            </button>
             <button
               onClick={() => {
                 handleComingSoon('Stake');
